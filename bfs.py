@@ -16,11 +16,14 @@ print(adj)
 visit = [] # List to keep track of visited nodes.
 q = []     #Initialize a queue
 
+path =[]
 def bfs(visit, adj, node,goal):
+    
     visit.append(node)
     q.append(node)
     while len(q)!=0:
         s = q.pop(0)
+        path.append(s)
         if s == goal:
           return True
         for neighbour in adj[s]:
